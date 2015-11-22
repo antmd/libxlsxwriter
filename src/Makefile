@@ -38,7 +38,7 @@ SOFLAGS = -shared -fPIC
 UNAME := $(shell uname)
 ifeq ($(UNAME), Darwin)
 LIBXLSXWRITER_SO = libxlsxwriter.dylib
-SOFLAGS = -dynamiclib -fPIC -install_name /usr/lib/$(LIBXLSXWRITER_SO)
+SOFLAGS = -dynamiclib -fPIC -install_name @rpath/$(LIBXLSXWRITER_SO)
 endif
 
 
